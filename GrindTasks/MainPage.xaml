@@ -10,19 +10,19 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="grindtasks_logos.jpeg"
+                SemanticProperties.Description="Logo for GrindTasks"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Grind Tasks"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to GrindTasks"
+                Text="Welcome to Grind Tasks, the open source Task Manager."
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Open Source Reminder app"
                 FontSize="18"

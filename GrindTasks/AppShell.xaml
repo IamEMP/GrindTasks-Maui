@@ -3,7 +3,7 @@
     x:Class="GrindTasks.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GrindTasks"
+    xmlns:local="clr-namespace:GrindTasks" x:DataType="local:MainPage"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
