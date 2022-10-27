@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrindTasks", "GrindTasks\GrindTasks.csproj", "{5EE88DC0-0C32-4EA3-AFB2-D59EC69EE754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindTasks.Data", "GrindTasks.Data\GrindTasks.Data.csproj", "{D26265F0-9A2B-40C9-AFA7-1EB3E4EF6287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindTasks.Data.Tests", "GrindTasks.Data.Tests\GrindTasks.Data.Tests.csproj", "{E5D5B4F6-684F-4F35-A29C-770256D0A760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +21,14 @@ Global
 		{5EE88DC0-0C32-4EA3-AFB2-D59EC69EE754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EE88DC0-0C32-4EA3-AFB2-D59EC69EE754}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EE88DC0-0C32-4EA3-AFB2-D59EC69EE754}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D26265F0-9A2B-40C9-AFA7-1EB3E4EF6287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26265F0-9A2B-40C9-AFA7-1EB3E4EF6287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26265F0-9A2B-40C9-AFA7-1EB3E4EF6287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26265F0-9A2B-40C9-AFA7-1EB3E4EF6287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D5B4F6-684F-4F35-A29C-770256D0A760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D5B4F6-684F-4F35-A29C-770256D0A760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D5B4F6-684F-4F35-A29C-770256D0A760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D5B4F6-684F-4F35-A29C-770256D0A760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
