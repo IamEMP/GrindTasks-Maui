@@ -28,9 +28,19 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
+            <Entry Placeholder="Enter Task Here"
+                   PlaceholderColor="Grey"
+                   MaxLength="100"
+                   x:Name = "newTask"
+                   ClearButtonVisibility="WhileEditing"
+                   Keyboard="Chat"
+                   ReturnType="Done"
+                   IsSpellCheckEnabled="True"
+                    />
+
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
+                x:Name="newTaskButton"
+                Text="Create New task"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
@@ -39,4 +49,7 @@
     </ScrollView>
 
 </ContentPage>
+
+
+
 
