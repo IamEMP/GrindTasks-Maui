@@ -1,52 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GrindTasks.MainPage">
+             x:Class="GrindTasks.MainPage"
+             xmlns:viewmodel="clr-namespace:GrindTasks.ViewModel"
+             x:DataType="viewmodel:MainView">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+   <Grid RowDefinitions="100, Auto, *"
+         ColumnDefinitions=".75*, .25*"
+         Padding="10"
+         RowSpacing="10"
+         ColumnSpacing="10">
+       
 
-            <Image
-                Source="grindtasks_logos.jpeg"
-                SemanticProperties.Description="Logo for GrindTasks"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+       <Entry Placeholder="Enter Task"
+              Text="{Binding Text}"
+              Grid.Row="0"
+              MaxLength="100"/>
 
-            <Label
-                Text="Grind Tasks"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+       <Button Text="Add"
+               Command="{Binding AddCommand}"
+               Grid.Row="0"
+               Grid.Column="1"/>
 
-            <Label
-                Text="Welcome to Grind Tasks, the open source Task Manager."
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Open Source Reminder app"
-                FontSize="18"
-                HorizontalOptions="Center" />
 
-            <Entry Placeholder="Enter Task Here"
-                   PlaceholderColor="Grey"
-                   MaxLength="100"
-                   x:Name = "newTask"
-                   ClearButtonVisibility="WhileEditing"
-                   Keyboard="Chat"
-                   ReturnType="Done"
-                   IsSpellCheckEnabled="True"
-                    />
+       <CollectionView Grid.Row="2" Grid.ColumnSpan="2"
+                       ItemsSource="{Binding Items}">
+           
+               <CollectionView.ItemTemplate>
+                   <DataTemplate x:DataType="{x:Type x:String}">
+                       <SwipeView>
+                           <SwipeView.RightItems>
+                               <SwipeItems>
+                                   <SwipeItem Text="Delete"
+                                              BackgroundColor="Red"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainView}}, Path=DeleteCommand}"
+                                              CommandParameter="{Binding .}"/>
 
-            <Button
-                x:Name="newTaskButton"
-                Text="Create New task"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                               </SwipeItems>
 
-        </VerticalStackLayout>
-    </ScrollView>
+                           </SwipeView.RightItems>
+                       
+                       <Grid Padding="0,5">
+                           <Frame>
+                               <Label Text="{Binding .}"
+                                      FontSize="24"/>
+
+                           </Frame>
+
+                       </Grid>
+                    </SwipeView>
+
+                   </DataTemplate>
+
+               </CollectionView.ItemTemplate>
+
+       </CollectionView>
+
+   </Grid>
+
+          
 
 </ContentPage>
 
