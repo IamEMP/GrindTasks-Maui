@@ -36,6 +36,10 @@ namespace GrindTasks.ViewModel
                 Items.Remove(s);
             }
         }
+        [RelayCommand]
+
+        Task Navigate() => Shell.Current.GoToAsync("CreatedTasks");
 
     }
+
 }
