@@ -35,31 +35,21 @@
                                               BackgroundColor="Red"
                                               Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainView}}, Path=DeleteCommand}"
                                               CommandParameter="{Binding .}"/>
-
+                                   <SwipeItem Text="Save"
+                                              BackgroundColor="LightGreen"/>
                                </SwipeItems>
-
-                           </SwipeView.RightItems>
-                       
+                           </SwipeView.RightItems>                       
                        <Grid Padding="0,5">
                            <Frame>
                                <Label Text="{Binding .}"
                                       FontSize="24"/>
-
                            </Frame>
-
                        </Grid>
                     </SwipeView>
-
                    </DataTemplate>
-
                </CollectionView.ItemTemplate>
-
        </CollectionView>
-
-   </Grid>
-
-          
-
+   </Grid>      
 </ContentPage>
 
 
