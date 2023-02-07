@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="sqlite-net-pcl" />
+    <None Remove="SQLitePCLRaw.provider.dynamic_cdecl" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
+  </ItemGroup>
 </Project>

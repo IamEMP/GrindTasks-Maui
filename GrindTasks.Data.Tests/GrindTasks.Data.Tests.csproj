@@ -19,10 +19,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GrindTasks.Data\GrindTasks.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="sqlite-net-pcl" />
+    <None Remove="SQLitePCLRaw.provider.dynamic_cdecl" />
+  </ItemGroup>
 </Project>

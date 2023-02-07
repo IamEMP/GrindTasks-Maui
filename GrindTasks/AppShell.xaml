@@ -16,8 +16,8 @@
         Route="MainPage" />
 
         <ShellContent
-        Title="Tasks"
-        Route="CreatedTasks" ContentTemplate="{DataTemplate local:ViewModel.CreatedTasks}" />
+        Title="Calendar"
+        Route="Calendar" ContentTemplate="{DataTemplate local:ViewModel.Calendar}" />
 
     </FlyoutItem>
 
