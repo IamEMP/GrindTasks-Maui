@@ -12,11 +12,11 @@ namespace GrindTasks.Data.Tests.Models
     {
         private PersonalTask SUT;
 
+        PersonalTaskTests() => SUT = new PersonalTask();
+
         [Fact]
         public void Given_all_subTasks_are_completed_CompleteTask_returns_true()
-        {
-            SUT = new PersonalTask();
-
+        { 
             Assert.True(SUT.CompleteTask());
         }
     }
