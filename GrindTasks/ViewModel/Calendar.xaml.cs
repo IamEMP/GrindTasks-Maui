@@ -1,8 +1,8 @@
 ﻿namespace GrindTasks.ViewModel;
 
-public partial class CreatedTasks : ContentPage
+public partial class Calendar : ContentPage
 {
-	public CreatedTasks()
+	public Calendar()
 	{
 		InitializeComponent();
 	}

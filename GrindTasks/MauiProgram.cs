@@ -17,7 +17,7 @@ public static class MauiProgram
 			});
 		builder.Services.AddSingleton<MainPage>();
 		builder.Services.AddSingleton<MainView>();
-
+		builder.Services.AddSingleton<TaskData>();
 
 		return builder.Build();
 	}
