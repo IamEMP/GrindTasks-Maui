@@ -6,7 +6,7 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 
-		Routing.RegisterRoute(nameof(ViewModel.Calendar), typeof(ViewModel.Calendar));
+		Routing.RegisterRoute(nameof(View.CalendarPage), typeof(View.CalendarPage));
 	}
 }
 
