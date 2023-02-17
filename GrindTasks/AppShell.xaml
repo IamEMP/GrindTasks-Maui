@@ -17,7 +17,7 @@
 
         <ShellContent
         Title="Calendar"
-        Route="Calendar" ContentTemplate="{DataTemplate local:ViewModel.Calendar}" />
+        Route="Calendar" ContentTemplate="{DataTemplate local:View.CalendarPage}" />
 
     </FlyoutItem>
 

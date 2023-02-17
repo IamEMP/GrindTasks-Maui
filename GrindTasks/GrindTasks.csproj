@@ -63,6 +63,8 @@
 	  <None Remove="sqlite-net-pcl" />
 	  <None Remove="SQLitePCLRaw.provider.dynamic_cdecl" />
 	  <None Remove="SQLitePCLRaw.bundle_e_sqlite3" />
+	  <None Remove="View\" />
+	  <None Remove="XCalendar.Maui" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls" Version="7.1.3" />
@@ -70,16 +72,21 @@
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 	  <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.4" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="XCalendar.Maui" Version="4.4.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Resources\Images\" /> 
 	  <Folder Include="ViewModel\" />
+	  <Folder Include="View\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\icons8-note-48.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="ViewModel\CreatedTasks.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="View\CalendarPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>
