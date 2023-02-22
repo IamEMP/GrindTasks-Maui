@@ -12,7 +12,7 @@
 
         <xc:CalendarView
             BackgroundColor="#404040"
-            Padding="30"
+            Padding="20"
             BackwardsArrowCommand="{Binding NavigateCalendarCommand}"
             Days="{Binding MyCalendar.Days}"
             DaysOfWeek="{Binding MyCalendar.DayNamesOrder}"
