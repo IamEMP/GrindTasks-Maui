@@ -12,11 +12,13 @@
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
     <ShellContent
         Title="Home"
+        Icon="homeicon.png"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
         <ShellContent
         Title="Calendar"
+        Icon="calendaricon.png"
         Route="Calendar" ContentTemplate="{DataTemplate local:View.CalendarPage}" />
 
     </FlyoutItem>
