@@ -12,6 +12,7 @@
         
 
             <Entry x:Name="tasksEntry"
+               ClearButtonVisibility="WhileEditing"
                Placeholder="Enter Task"
                FontSize="Medium"
                IsSpellCheckEnabled="True"
@@ -29,6 +30,13 @@
                 Clicked="OnButtonClicked"
                  Grid.Row="0"
                Grid.Column="1"/>
+
+
+            <DatePicker x:Name="taskDate"
+                
+                DateSelected="taskDate_DateSelected"
+                Grid.Row="1"
+               Grid.Column="0"/>
 
            <Button Text="Update"
                 WidthRequest="100"
@@ -55,8 +63,8 @@
                   </SwipeView.RightItems>                       
             <Grid Padding="0,5">
                   <Frame>
-                 <Label Text="{Binding todolist}"
-                    FontSize="Large"
+                 <Label Text="{Binding toDoWithDates}"
+                    FontSize="Medium"
                     Padding="10"/>
                  </Frame>
                        </Grid>
