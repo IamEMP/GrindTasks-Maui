@@ -27,12 +27,15 @@ public partial class MainPage : ContentPage
         collectionView.ItemsSource = await App.Database.GetTasksAsync();
     }
 
+
+
     async void OnButtonClicked(object sender, EventArgs e)
     {
         if (!string.IsNullOrWhiteSpace(tasksEntry.Text))
         {
             await App.Database.SaveTasksAsync(new TaskData
             {
+                taskDateList = taskDate.Date.ToShortDateString(),
                 todolist = tasksEntry.Text
 
             }) ;
@@ -60,9 +63,11 @@ public partial class MainPage : ContentPage
         if (lastSelection != null)
         {
             lastSelection.todolist = tasksEntry.Text;
+            lastSelection.taskDateList = taskDate.Date.ToShortDateString();
             await App.Database.UpdateTasksAsync(lastSelection);
             collectionView.ItemsSource = await App.Database.GetTasksAsync();
         }
+        tasksEntry.Text = "";
     }
 
     //Delete Entries
@@ -74,8 +79,19 @@ public partial class MainPage : ContentPage
             await App.Database.DeleteTasksAsync(lastSelection);
             collectionView.ItemsSource = await App.Database.GetTasksAsync();
         }
+        tasksEntry.Text = "";
     }
 
+    void taskDate_DateSelected(System.Object sender, Microsoft.Maui.Controls.DateChangedEventArgs e)
+    {
+        DatePicker.DateProperty.ToString();
+        DatePicker datePicker = new DatePicker
+        {
+            MinimumDate = new DateTime(2023, 1, 1),
+            MaximumDate = new DateTime(2085, 12, 31),
+            
+        };
+    }
 
 }
 

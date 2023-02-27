@@ -11,6 +11,7 @@
     <VerticalStackLayout>
 
         <xc:CalendarView
+            DaysViewHeightRequest="300"
             BackgroundColor="#404040"
             Padding="20"
             BackwardsArrowCommand="{Binding NavigateCalendarCommand}"
@@ -27,7 +28,11 @@
                 <x:Int32>-1</x:Int32>
             </xc:CalendarView.BackwardsArrowCommandParameter>
 
+            
+
         </xc:CalendarView>
+
+  
 
     </VerticalStackLayout>
 
