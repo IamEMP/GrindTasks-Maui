@@ -33,7 +33,6 @@
 
 
             <DatePicker x:Name="taskDate"
-                
                 DateSelected="taskDate_DateSelected"
                 Grid.Row="1"
                Grid.Column="0"/>
@@ -63,7 +62,7 @@
                   </SwipeView.RightItems>                       
             <Grid Padding="0,5">
                   <Frame>
-                 <Label Text="{Binding toDoWithDates}"
+                 <Label Text="{Binding createdTaskList}"
                     FontSize="Medium"
                     Padding="10"/>
                  </Frame>
